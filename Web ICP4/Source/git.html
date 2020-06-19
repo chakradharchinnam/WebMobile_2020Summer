@@ -1,0 +1,53 @@
+<html>
+<!--head of the page starts here-->
+<head>
+    <title>Github User Finder</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <!--Adding background image to the page-->
+    <style>
+        body{
+            background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/607baf09-f3f7-416a-8415-9b6e9c1283b6/d6se2bp-711f5675-e4c9-4240-a9de-29e711fe68d6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNjA3YmFmMDktZjNmNy00MTZhLTg0MTUtOWI2ZTljMTI4M2I2XC9kNnNlMmJwLTcxMWY1Njc1LWU0YzktNDI0MC1hOWRlLTI5ZTcxMWZlNjhkNi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.hArAu8uROinEoZMjjdux0gBT9ElbwPdoy-91u2NlYXo') ;
+        }
+    </style>
+</head>
+<!--head of the page ends here-->
+<!--content of the page starts here-->
+<body>
+<!--including heading to the page-->
+<header>
+    <h1>Welcome TO Git Users  Club!</h1>
+</header>
+<div id="container">
+    <div class="search">
+            <a href="#" ><img style="margin: auto; width: 60px;height: 60px" src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" alt="logo"></a>
+        <!--adding placeholder element to the serach bar-->
+        <input id="username" placeholder="Enter a Github username..." type="text">
+    </div>
+    <div id="profile">
+        <h2></h2>
+        <div class="avatar">
+            <img id="imgavg">
+        </div>
+        <div class="information">
+            <table>
+                <tr>
+                    <td style="color: white">Name</td><td><span style="color: white"; id="txtname"></span></td>
+                </tr><tr>
+                <td style="color: white">ID</td><td><span style="color: white"; id="txtid"></span></td>
+            </tr><tr>
+                <td style="color: white">GitHub URL</td><td><a style="color: white"; id="txturl"></a></td>
+            </tr><tr>
+                <td style="color: white">Public Repositories</td><td><span style="color: white"; id="txtrepository"></span></td>
+            </tr><tr>
+                <td style="color: white">Followers</td><td><span style="color: white"; id="followers"></span></td>
+            </tr><tr>
+                <td style="color: white">Following</td><td><span style="color: white"; id="following"></span></td>
+            </tr></table>
+        </div>
+    </div>
+</div>
+</body>
+<!--content of the page ends here-->
+</html>
