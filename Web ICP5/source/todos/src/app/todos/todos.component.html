@@ -1,0 +1,52 @@
+<div class="todos">
+  <header class="text-center">
+    <h1>Chakradhar's Todo List</h1>    <!--header 1 -->
+
+  </header>
+
+  <form>
+    <div class="row">
+      <div class="col-5">
+        <input type="text" class="form-control" placeholder="type the work" name="todo" [(ngModel)]="todo"> <!--input given -->
+
+      </div>
+      <!-- </div> -->
+      <div class="col-5">
+        <input type="date" class="form-control" id="tasktime" [(ngModel)]="time" name="time">
+      </div>
+      <div class="col-2">
+        <button type="button" class="btn btn-success" (click)="saveTodo()">Save Task</button>   <!--buttons -->
+      </div>
+    </div>
+  </form>
+  <div class="todo-list mt-20">
+    <h3>Pending Items</h3>
+    <ul class="todo-list list-card" *ngFor="let todo of todos;let i=index">
+      <li class="list-item-card pt-10"  *ngIf="!todo.completed" [class.completed]="todo.completed">
+        <div class="view">
+          <input class="toggle mr-10" type="checkbox" (click)="toggleTodoComplete(i)" [checked]="todo.completed">
+          <label class="mr-10">{{todo.name}}</label>
+          <span *ngIf="countDownTimes[i]">
+                    <button class="btn btn-primary mr-10">{{countDownTimes[i]?.days + 'd'}} <!--input for time  -->
+                    {{countDownTimes[i]?.hours + 'h'}}
+                    {{countDownTimes[i]?.minutes + 'm'}}
+                    {{countDownTimes[i]?.seconds + 's'}}</button>
+                </span>
+          <button class="btn btn-secondary mr-10" (click)="toggleTodoComplete(i)">Complete</button>
+          <button class="btn btn-danger delete mr-10" (click)="removeTodo(i)">Delete</button>  <!--input removal -->
+        </div>
+      </li>
+    </ul>
+    <h3>Completed Items</h3>
+    <ul class="todo-list list-card" *ngFor="let todo of todos;let i=index">
+      <li class="list-item-card pt-10"  *ngIf="todo.completed" [class.completed]="todo.completed"> <!--input given is completed  -->
+        <div class="view">
+          <input class="toggle mr-10" type="checkbox" (click)="toggleTodoComplete(i)" [checked]="todo.completed">
+          <label class="mr-10">{{todo.name}}</label>
+          <button class="btn btn-secondary mr-10" (click)="toggleTodoComplete(i)">Mark as Uncompleted</button>
+          <button class="btn btn-danger delete mr-10" (click)="removeTodo(i)">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

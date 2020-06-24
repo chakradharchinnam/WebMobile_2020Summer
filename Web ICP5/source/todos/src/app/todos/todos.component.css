@@ -1,0 +1,45 @@
+.mr-10 {
+  margin-right: 10px;
+}
+
+.pt-10 {
+  padding-top:10px;
+}
+
+.mt-20 {
+  margin-top:20px;
+}
+
+.todos {
+  width: 50%;
+  border: 1px solid yellow;
+  padding: 10px 14px;
+  margin: 70px auto;
+  box-shadow: 4px 4px blue;
+  border-radius: 21px;
+  background-color: firebrick;
+  color:white;
+}
+
+.delete {
+  float: right;
+}
+
+.list-item-card.completed {
+  border-left:10px solid green;
+}
+
+.list-card {
+  padding: 0px;
+}
+
+.list-item-card {
+  list-style: none;
+  border: 1px solid darkred;
+  padding: 10px 14px;
+  margin: 10px auto;
+  box-shadow: 2px 2px black;
+  border-radius: 10px;
+  background-color:aliceblue;
+  color:red;
+}
