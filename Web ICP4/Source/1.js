@@ -1,7 +1,7 @@
-function upDate(previewPic) {     <! –– preview update function ––>
+function upDate(previewPic) {
     //if(previewPic=)
     console.log(previewPic);
-    $('#image').css('background-image', 'url(' + previewPic.src + ')');   <! –– bg image url ––>
+    $('#image').css('background-image', 'url(' + previewPic.src + ')');
     $('#image').html(previewPic.alt);
 //     if(previewPic.alt=="Batter is ready")
 // {
@@ -18,8 +18,8 @@ function upDate(previewPic) {     <! –– preview update function ––>
 //         $('#image').html("Yummy yummy cup cake");
 //     }
 }
-<! –– image sources ––>
-function unDo() {                       <! –– undo function––>
+
+function unDo() {
     $('#image').css('background-image','none');
     $('#image').html("Hover over an image below to display here.");
 }
