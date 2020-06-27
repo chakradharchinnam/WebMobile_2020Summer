@@ -1,0 +1,47 @@
+.parent-container {
+  position: center;
+  height:100%;
+  width: 100%;
+}
+
+.child-container {
+  color: black;
+  text-align: center;
+  position: left;
+
+}
+h2 {
+  background-color: darkred;
+}
+
+div {
+  background-color: navajowhite;
+}
+
+p {
+  background-color: white;
+}
+::placeholder {
+  color: Black;
+  opacity: 1;}
+.desc {
+  font-family: "Times New Roman";
+  font-size: 20px;
+}
+
+.thumbnail {
+  box-shadow: 0 4px 8px 0 navajowhite(0, 0, 0, 0.5);
+  transition: 0.3s;
+  min-width: 40%;
+  border-radius: 5px;
+}
+
+.thumbnail-description {
+  min-height: 100px;
+}
+
+.thumbnail:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 20px 0 navajowhite(0, 0, 0, 1);
+
+}
