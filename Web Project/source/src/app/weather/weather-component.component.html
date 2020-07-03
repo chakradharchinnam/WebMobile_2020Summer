@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="row mt-10">
+                <i class="fas fa-cloud"></i>
+                <div class="value">{{ weatherInfo?.summary }}</div>
+                <p>{{ weatherInfo?.location }}</p>
+            </div>
+            <div class="row mt-5">
+                <div class="value">{{ weatherInfo?.temperature }} &#8457;</div>
+                <p>Change Location</p>
+            </div>
+        </div>
+        <div class="col-md-8 col-xs-12">
+            <h1 class="text-center text-bold">Weather Information</h1>
+            <div class="inner-addon right-addon">
+                <i class="glyphicon glyphicon-search" (click)="getWeatherData()"></i>
+                <input type="text" class="form-control city-input" placeholder="Enter city or state" [(ngModel)]="locationName" (keyup.enter)="getWeatherData()" />
+            </div>
+        </div>
+        <div class="col-md-2 col-xs-2 pull-right">
+            <div class="row mt-10">
+                <p><i class="fas fa-water"></i> Humidity</p>
+                <div class="value">{{ weatherInfo?.humidity }}</div>
+            </div>
+            <div class="row mt-5">
+                <p><i class="fas fa-temperature-low"></i> Air Pressure</p>
+                <div class="value">{{ weatherInfo?.pressure }} PS</div>
+            </div>
+            <div class="row mt-5">
+                <p><i class="fas fa-umbrella"></i> Chance of Rain</p>
+                <div class="value">{{ weatherInfo?.rainChance }}</div>
+            </div>
+            <div class="row mt-5">
+                <p><i class="fas fa-wind"></i> Wind speed</p>
+                <div class="value">{{ weatherInfo?.windSpeed }}km/h</div>
+            </div>
+        </div>
+    </div>
+    <div class="row"></div>
+    <div class="row">
+        <h3 class="text-center recent text-bold mb-10">Recent Searches</h3>
+        <div class="col-md-3" *ngFor="let search of recentSearches; let i = index">
+            <div *ngIf="i < 4">
+                <div class="value hr">{{ search.temperature }}</div>
+                <p>{{ search.summary }}</p>
+                <p>{{ search.location }}</p>
+            </div>
+        </div>
+    </div>
+</div>
