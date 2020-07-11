@@ -1,0 +1,37 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Vickys Pizza House</string>
+    <string name="name">Name</string>
+
+    <string name="toppings">Toppings</string>
+
+    <string name="quantity">Quantity</string>
+
+    <string name="initial_quantity_value">2</string>
+
+    <string name="order">Order</string>
+
+    <string name="summary_name">Name:<xliff:g id="peru" example="Vicky">%s</xliff:g></string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="summary_quantity"><b>Quantity: </b><xliff:g id="sankya" example="1">%d</xliff:g></string>
+    <string name="summary_total_price"><b>Total: </b>$ <xliff:g id="price" example="10">%.2f</xliff:g></string>
+    <string name="thank_you"><b>Thank you!</b></string>
+
+    <!-- For Pizza -->
+    <string name="Chicken">Chicken Strips</string>
+    <string name="Bacon">Beef</string>
+    <string name="Pepperoni">Pork</string>
+    <string name="OP">Pineapple</string>
+
+    <string name="too_many_pizzas">Select less than 20 Pizzas</string>
+    <string name="too_less_pizzas">Select 1 Pizza atleast </string>
+    <string name="userNull">Name of customer is Mandatory</string>
+
+    <!-- For Pizza Order Summary -->
+    <string name="summary_chicken"><b>Chicken In?</b><xliff:g id="addChicken" example="yes">%s</xliff:g></string>
+    <string name="summary_bacon"><b>Beef in? </b><xliff:g id="addBacon" example="yes">%s</xliff:g></string>
+    <string name="summary_pepperoni"><b> Pork In? </b><xliff:g id="addPepperoni" example="yes">%s</xliff:g></string>
+    <string name="summary_op"><b>Pineapple in? </b><xliff:g id="addOP" example="yes">%s</xliff:g></string>
+
+
+</resources>
