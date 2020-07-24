@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MedicalAssistantActivity"
+    android:background="@drawable/bg">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/voiceInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:forceHasOverlappingRendering="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/btnSpeakContainer"
+        android:layout_width="144dp"
+        android:layout_height="121dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="24dp"
+        android:background="#2C314C"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="70dp"
+            android:layout_height="62dp"
+            android:background="@null"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/mike" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="93dp"
+            android:layout_height="27dp"
+            android:text="Tap to Speak"
+            android:textColor="#DDBFBF" />
+
+    </LinearLayout>
+</RelativeLayout>
