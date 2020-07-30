@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/blue"
+    tools:context="com.example.chakradhar.weatherapp.WeatherINFO">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/city_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/A4dp"
+            android:text="@string/city_country"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/LocationName" />
+
+        <TextView
+            android:id="@+id/current_date"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/MarginTop"
+            android:text="@string/date_today"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/Fond14sp" />
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="118dp"
+            android:layout_height="124dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/A4dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/cloud2" />
+
+        <com.github.pavlospt.CircleView
+            android:id="@+id/weather_result"
+            android:layout_width="152dp"
+            android:layout_height="156dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/MarginTop"
+            app:cv_backgroundColorValue="@color/colorCircleStroke"
+            app:cv_fillColor="@color/colorBackground"
+            app:cv_strokeColorValue="@color/colorCircleStroke"
+            app:cv_subtitleSize="@dimen/_12sdp"
+            app:cv_subtitleText="@string/weather_information"
+            app:cv_titleColor="@color/colorWhite"
+            app:cv_titleSize="@dimen/Temperature"
+            app:cv_titleSubtitleSpace="40"
+            app:cv_titleText="@string/current_temperature" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_16sdp">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wind"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/A14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/wind_result"
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/A4dp"
+                    android:text="@string/wind_speed"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/A14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/add_location"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/A4dp"
+                    android:src="@drawable/cross" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="53dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/_16sdp">
+
+                <TextView
+                    android:layout_width="78dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="@string/humidity"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/A14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/humidity_result"
+                    android:layout_width="39dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/A4sp"
+                    android:text="@string/humidity_rate"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/A14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/blue"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/week"
+            android:scrollbars="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
